@@ -115,6 +115,13 @@ const arithmeticFunctions = {
     }
     return result;
   },
+  exponent: (...args) => {
+    let result = args[0];
+    for (let index = 1; index < args.length; index++) {
+      result **= args[index];
+    }
+    return result;
+  },
   modulus: (...args) => {
     let result = args[0];
     for (let index = 1; index < args.length; index++) {
@@ -129,4 +136,5 @@ console.log(arithmeticFunctions.add(5, 2, 3));
 console.log(arithmeticFunctions.subtract(10, 2, 3));
 console.log(arithmeticFunctions.multiply(20, 2, 2));
 console.log(arithmeticFunctions.divide(20, 2, 2));
+console.log(arithmeticFunctions.exponent(3, 2, 2));
 console.log(arithmeticFunctions.modulus(50, 40, 3));
